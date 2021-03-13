@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<form action="{{ url_for('upload') }}" method="POST" role="form">
+                  
+	<div class="form-group">
+	  <div class="input-group">
+		<input name="name" type="text" class="form-control" placeholder="Enter image name">
+		<input name="date" type="date" class="form-control" placeholder="Enter upload date">
+		<input name="link" type="text" class="form-control" placeholder="Enter image link">
+		<button type="submit" class="btn btn-primary btn-default" id="upload-btn">UPLOAD</button>
+	  </div>
+	</div>
+</form>
+
+<form action="{{ url_for('search') }}" method="POST" role="form">
+	<div class="form-group">
+		<div class="input-group">
+			<input name="name" type="text" class="form-control" placeholder="Search Image">
+			<button type="submit" class="btn btn-primary btn-default" id="search-btn">Search</button> 
+		</div>
+	</div>
+</form>
+
+
+
+
+{% endblock %}
